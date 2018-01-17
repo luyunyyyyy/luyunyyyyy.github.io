@@ -190,6 +190,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -411,7 +421,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2017-12-23-merge-two-sorted-lists/">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2018-01-15-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyunyyyyy">
@@ -430,7 +440,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/15/2017-12-23-merge-two-sorted-lists/" itemprop="url">合并链表-算法-1</a></h1>
+                <a class="post-title-link" href="/2018/01/15/2018-01-15-hexo/" itemprop="url">Hexo-从零开始</a></h1>
         
 
         <div class="post-meta">
@@ -474,7 +484,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  253 字
+                  101 字
                 </span>
               
 
@@ -513,19 +523,37 @@
       
         
           
-            <p>#merge-two-sorted-lists<br>合并两个已经排序好的链表<br>lintcode:<a href="http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/" target="_blank" rel="noopener">http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/</a><br>leetcode:<a href="https://leetcode.com/problems/merge-two-sorted-lists/solution/" target="_blank" rel="noopener">https://leetcode.com/problems/merge-two-sorted-lists/solution/</a></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
-<li>先遍历链表计算出总位置</li>
-<li>然后再计算出要删的节点的位置</li>
-<li>然后顺序遍历删除<br>这种情况就需要把删除头结点作为特殊情况单独提取出来</li>
-</ul>
-<p>遍历两次<br>需要遍历一次链表<br>则两个指针 一个先跑 一个后跑<br>当前面那个到尾，另一个就到了要删的地方了</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>删头结点怎么办<br>即倒数第n个节点</p>
-<h2 id="需要注意的"><a href="#需要注意的" class="headerlink" title="需要注意的"></a>需要注意的</h2><p>两个链表相互交叉插入 然后<br>需要在运行完了之后 注意到可能有一个比较长 会剩余一段。所以就要再取出来。</p>
-<h2 id="可以优化的"><a href="#可以优化的" class="headerlink" title="可以优化的"></a>可以优化的</h2><p>空间<br>再去LeetCode上找一下相关的题<br>leetcode</p>
+            <p>目标</p>
 <ul>
-<li>在最后的合并剩余部分 可以直接把链表接上 不需要遍历了！！</li>
+<li>解析为两个部分<ul>
+<li>国外访问Github</li>
+<li>国内访问Coding.net</li>
 </ul>
+</li>
+<li>SEO</li>
+</ul>
+<p>步骤</p>
+<ul>
+<li>Hexo 安装<ul>
+<li>前置<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+</li>
+<li>npm install -g hexo-cli</li>
+<li>在指定目录进行hexo init</li>
+</ul>
+</li>
+<li>目录结构</li>
+<li>配置文件</li>
+</ul>
+<p>问题</p>
+<pre><code>- WARN  No layout
+    - Hexo的主题格式不对，我使用的next。theme下文件夹直接改为next
+- 向Github部署的时候发生错误
+- 
+</code></pre><p><img src="./_image/2018-01-15-20-39-57.jpg" alt=""></p>
+<p><img src="./_image/2018-01-15-20-38-37.jpg" alt=""><br>解决方式<br>npm install hexo-deployer-git –save</p>
 
           
         
@@ -747,7 +775,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2018-01-15-hexo/">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2017-12-23-merge-two-sorted-lists/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyunyyyyy">
@@ -766,7 +794,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/15/2018-01-15-hexo/" itemprop="url">Hexo-从零开始</a></h1>
+                <a class="post-title-link" href="/2018/01/15/2017-12-23-merge-two-sorted-lists/" itemprop="url">合并链表-算法-1</a></h1>
         
 
         <div class="post-meta">
@@ -810,7 +838,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  101 字
+                  253 字
                 </span>
               
 
@@ -849,37 +877,19 @@
       
         
           
-            <p>目标</p>
+            <p>#merge-two-sorted-lists<br>合并两个已经排序好的链表<br>lintcode:<a href="http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/" target="_blank" rel="noopener">http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/</a><br>leetcode:<a href="https://leetcode.com/problems/merge-two-sorted-lists/solution/" target="_blank" rel="noopener">https://leetcode.com/problems/merge-two-sorted-lists/solution/</a></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li>先遍历链表计算出总位置</li>
+<li>然后再计算出要删的节点的位置</li>
+<li>然后顺序遍历删除<br>这种情况就需要把删除头结点作为特殊情况单独提取出来</li>
+</ul>
+<p>遍历两次<br>需要遍历一次链表<br>则两个指针 一个先跑 一个后跑<br>当前面那个到尾，另一个就到了要删的地方了</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>删头结点怎么办<br>即倒数第n个节点</p>
+<h2 id="需要注意的"><a href="#需要注意的" class="headerlink" title="需要注意的"></a>需要注意的</h2><p>两个链表相互交叉插入 然后<br>需要在运行完了之后 注意到可能有一个比较长 会剩余一段。所以就要再取出来。</p>
+<h2 id="可以优化的"><a href="#可以优化的" class="headerlink" title="可以优化的"></a>可以优化的</h2><p>空间<br>再去LeetCode上找一下相关的题<br>leetcode</p>
 <ul>
-<li>解析为两个部分<ul>
-<li>国外访问Github</li>
-<li>国内访问Coding.net</li>
+<li>在最后的合并剩余部分 可以直接把链表接上 不需要遍历了！！</li>
 </ul>
-</li>
-<li>SEO</li>
-</ul>
-<p>步骤</p>
-<ul>
-<li>Hexo 安装<ul>
-<li>前置<ul>
-<li>Node.js</li>
-<li>Git</li>
-</ul>
-</li>
-<li>npm install -g hexo-cli</li>
-<li>在指定目录进行hexo init</li>
-</ul>
-</li>
-<li>目录结构</li>
-<li>配置文件</li>
-</ul>
-<p>问题</p>
-<pre><code>- WARN  No layout
-    - Hexo的主题格式不对，我使用的next。theme下文件夹直接改为next
-- 向Github部署的时候发生错误
-- 
-</code></pre><p><img src="./_image/2018-01-15-20-39-57.jpg" alt=""></p>
-<p><img src="./_image/2018-01-15-20-38-37.jpg" alt=""><br>解决方式<br>npm install hexo-deployer-git –save</p>
 
           
         
@@ -1445,7 +1455,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
