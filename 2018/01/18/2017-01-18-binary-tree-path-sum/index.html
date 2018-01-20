@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="二叉树,算法," />
+  <meta name="keywords" content="算法,二叉树," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="二叉树的路径和http://www.lintcode.com/zh-cn/problem/binary-tree-path-sum/链接 题目内容给定一个二叉树，找出所有路径中各节点相加总和等于给定 目标值 的路径。一个有效的路径，指的是从根节点到叶节点的路径。 分析上来第一个想法，把所有路径和对应的和都计算出来，放在一个map中。计算完成之后遍历map，找到其中和符合结果的，把路径放到最后的结果">
-<meta name="keywords" content="二叉树,算法">
+<meta name="keywords" content="算法,二叉树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二叉树的路径和">
 <meta property="og:url" content="http://luyunyyyyy.com/2018/01/18/2017-01-18-binary-tree-path-sum/index.html">
 <meta property="og:site_name" content="lyy 的个人博客">
 <meta property="og:description" content="二叉树的路径和http://www.lintcode.com/zh-cn/problem/binary-tree-path-sum/链接 题目内容给定一个二叉树，找出所有路径中各节点相加总和等于给定 目标值 的路径。一个有效的路径，指的是从根节点到叶节点的路径。 分析上来第一个想法，把所有路径和对应的和都计算出来，放在一个map中。计算完成之后遍历map，找到其中和符合结果的，把路径放到最后的结果">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T02:49:40.227Z">
+<meta property="og:updated_time" content="2018-01-18T02:51:06.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树的路径和">
 <meta name="twitter:description" content="二叉树的路径和http://www.lintcode.com/zh-cn/problem/binary-tree-path-sum/链接 题目内容给定一个二叉树，找出所有路径中各节点相加总和等于给定 目标值 的路径。一个有效的路径，指的是从根节点到叶节点的路径。 分析上来第一个想法，把所有路径和对应的和都计算出来，放在一个map中。计算完成之后遍历map，找到其中和符合结果的，把路径放到最后的结果">
@@ -365,15 +365,16 @@
 <h2 id="题目内容"><a href="#题目内容" class="headerlink" title="题目内容"></a>题目内容</h2><p>给定一个二叉树，找出所有路径中各节点相加总和等于给定 目标值 的路径。<br>一个有效的路径，指的是从根节点到叶节点的路径。</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>上来第一个想法，把所有路径和对应的和都计算出来，放在一个map中。计算完成之后遍历map，找到其中和符合结果的，把路径放到最后的结果中。</p>
 <h3 id="看书得到的想法"><a href="#看书得到的想法" class="headerlink" title="看书得到的想法"></a>看书得到的想法</h3><p>通常来说关于树的算法题难免要使用递归。计算路径和可以认为是一个遍历树的过程。在前序遍历中，最先出现是根节点符合路径的要求。从根节点依次向下去遍历。把子节点的值加入到路径中，最后在叶子节点上停止。若符合要求则把该路径加入结果集合。若不符合则回退到父节点，再从父节点访问其他子节点的路径。<br>值得注意的是在回退之前需要把最后节点从队列中去除。</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="算法入口"><a href="#算法入口" class="headerlink" title="算法入口"></a>算法入口</h3><p>首先是调用函数，也是算法的入口。<br><strong>需要注意空指针</strong><br>在一开始没考虑传入 root 为 null 的情况。<br>在运行算法的时候发现不符合测试用例。后来发现测试用例传入一个空树，但是要求返回一个空数组。这就提醒我们需要注意边界条件。不仅仅是返回一个 null 还要注意题目的要求。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;List&lt;Integer&gt;&gt; binaryTreePathSum(TreeNode root, int target) &#123;</span><br><span class="line">        /*</span><br><span class="line">        调用一个函数 进行递归</span><br><span class="line">        */</span><br><span class="line">        // 好像不能return null 应该返回一个空数组</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        if(root == null)</span><br><span class="line">            return result;</span><br><span class="line">        int targetSum = 0;</span><br><span class="line">        </span><br><span class="line">        binaryTreePathSum(root,target,targetSum,new ArrayList(),result);</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="算法入口"><a href="#算法入口" class="headerlink" title="算法入口"></a>算法入口</h3><p>首先是调用函数，也是算法的入口。<br><strong>需要注意空指针</strong><br>在一开始没考虑传入 root 为 null 的情况。<br>在运行算法的时候发现不符合测试用例。后来发现测试用例传入一个空树，但是要求返回一个空数组。这就提醒我们需要注意边界条件。不仅仅是返回一个 null 还要注意题目的要求。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;List&lt;Integer&gt;&gt; binaryTreePathSum(TreeNode root, int target) &#123;</span><br><span class="line">        /*</span><br><span class="line">        调用一个函数 进行递归</span><br><span class="line">        */</span><br><span class="line">        // 好像不能return null 应该返回一个空数组</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        if(root == null)</span><br><span class="line">            return result;</span><br><span class="line">        int targetSum = 0;</span><br><span class="line">        </span><br><span class="line">        binaryTreePathSum(root,target,targetSum,new ArrayList(),result);</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h3><p>按照之前的思路，递归过程首先是分为四部分</p>
 <ul>
 <li>把当前节点加入路径 &amp; 更新路径和</li>
 <li>若当前节点是子节点 &amp; 路径和符合结果 =&gt; 输出结果到集合中</li>
 <li>若不符合结果 =&gt; 对子节点进行递归</li>
-<li>在路径中去除当前节点<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public void binaryTreePathSum(TreeNode temp, int target, int targetSum, List&lt;Integer&gt; path,</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result)&#123;</span><br><span class="line">    //需要保存一个路径</span><br><span class="line">        targetSum += temp.val;</span><br><span class="line">        path.add(temp.val);</span><br><span class="line">        </span><br><span class="line">        //若是子节点且和符合结果</span><br><span class="line">        if(targetSum == target &amp;&amp; temp.left == null &amp;&amp; temp.right == null)&#123;</span><br><span class="line">           //System.out.println(&quot;出现结果&quot;);</span><br><span class="line">           //同c++不同 数组中保存的不是拷贝 是当前的对象。</span><br><span class="line">           result.add(new ArrayList&lt;&gt;(path));</span><br><span class="line">           //不需要返回 因为这个若执行 最后的也不执行了。</span><br><span class="line">           //return ;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        //若不符合结果则递归调用子节点</span><br><span class="line">        if(temp.left !=null)&#123;</span><br><span class="line">           binaryTreePathSum(temp.left,target,targetSum,path,result);</span><br><span class="line">        &#125;</span><br><span class="line">        if(temp.right !=null)&#123;</span><br><span class="line">            binaryTreePathSum(temp.right,target,targetSum,path,result);</span><br><span class="line">        &#125;</span><br><span class="line">        path.remove(path.size()-1);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>在路径中去除当前节点</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public void binaryTreePathSum(TreeNode temp, int target, int targetSum, List&lt;Integer&gt; path,</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; result)&#123;</span><br><span class="line">    //需要保存一个路径</span><br><span class="line">        targetSum += temp.val;</span><br><span class="line">        path.add(temp.val);</span><br><span class="line">        </span><br><span class="line">        //若是子节点且和符合结果</span><br><span class="line">        if(targetSum == target &amp;&amp; temp.left == null &amp;&amp; temp.right == null)&#123;</span><br><span class="line">           //System.out.println(&quot;出现结果&quot;);</span><br><span class="line">           //同c++不同 数组中保存的不是拷贝 是当前的对象。</span><br><span class="line">           result.add(new ArrayList&lt;&gt;(path));</span><br><span class="line">           //不需要返回 因为这个若执行 最后的也不执行了。</span><br><span class="line">           //return ;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        //若不符合结果则递归调用子节点</span><br><span class="line">        if(temp.left !=null)&#123;</span><br><span class="line">           binaryTreePathSum(temp.left,target,targetSum,path,result);</span><br><span class="line">        &#125;</span><br><span class="line">        if(temp.right !=null)&#123;</span><br><span class="line">            binaryTreePathSum(temp.right,target,targetSum,path,result);</span><br><span class="line">        &#125;</span><br><span class="line">        path.remove(path.size()-1);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>最重要的问题就是在输出结果的时候,若直接把之前的传入参数 <code>path</code> 保存到数组中,会出行问题.主要原因就是 Java 的数组是直接保存传入的对象引用.若该对象发生改变数组中的内容也会改变.也就是说直接传 path 进去,最后的结果不是我们想要的值.<br>正确的方式是产生一个 <code>path</code> 的拷贝.作为结果传入.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(targetSum == target &amp;&amp; temp.left == null &amp;&amp; temp.right == null)&#123;</span><br><span class="line">           result.add(new ArrayList&lt;&gt;(path));</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
 
       
@@ -392,9 +393,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二叉树/" rel="tag"># 二叉树</a>
-          
             <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/二叉树/" rel="tag"># 二叉树</a>
           
         </div>
       
@@ -496,7 +497,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -509,7 +510,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -578,7 +579,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.2k</span>
+    <span title="Site words total count">3.6k</span>
   
 </div>
 
