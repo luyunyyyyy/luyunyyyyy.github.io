@@ -262,6 +262,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/23/2018-01-23-add-two-numbers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyunyyyyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lyy 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/23/2018-01-23-add-two-numbers/" itemprop="url">Add Two Numbers</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T23:40:50+08:00">
+                2018-01-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/22/2018-01-22-copy-list-with-random-pointer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1536,7 +1686,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2017-12-23-merge-two-sorted-lists/">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2017-12-22-SubTree/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyunyyyyy">
@@ -1555,7 +1705,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/15/2017-12-23-merge-two-sorted-lists/" itemprop="url">合并链表-算法-1</a></h1>
+                <a class="post-title-link" href="/2018/01/15/2017-12-22-SubTree/" itemprop="url">寻找子树-算法-1</a></h1>
         
 
         <div class="post-meta">
@@ -1599,7 +1749,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  253 字
+                  974 字
                 </span>
               
 
@@ -1615,7 +1765,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -1638,200 +1788,29 @@
       
         
           
-            <p>#merge-two-sorted-lists<br>合并两个已经排序好的链表<br>lintcode:<a href="http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/" target="_blank" rel="noopener">http://www.lintcode.com/zh-cn/problem/merge-two-sorted-lists/</a><br>leetcode:<a href="https://leetcode.com/problems/merge-two-sorted-lists/solution/" target="_blank" rel="noopener">https://leetcode.com/problems/merge-two-sorted-lists/solution/</a></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
-<li>先遍历链表计算出总位置</li>
-<li>然后再计算出要删的节点的位置</li>
-<li>然后顺序遍历删除<br>这种情况就需要把删除头结点作为特殊情况单独提取出来</li>
-</ul>
-<p>遍历两次<br>需要遍历一次链表<br>则两个指针 一个先跑 一个后跑<br>当前面那个到尾，另一个就到了要删的地方了</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>删头结点怎么办<br>即倒数第n个节点</p>
-<h2 id="需要注意的"><a href="#需要注意的" class="headerlink" title="需要注意的"></a>需要注意的</h2><p>两个链表相互交叉插入 然后<br>需要在运行完了之后 注意到可能有一个比较长 会剩余一段。所以就要再取出来。</p>
-<h2 id="可以优化的"><a href="#可以优化的" class="headerlink" title="可以优化的"></a>可以优化的</h2><p>空间<br>再去LeetCode上找一下相关的题<br>leetcode</p>
+            <h1 id="算法第一题-–-在大的树中寻找子树"><a href="#算法第一题-–-在大的树中寻找子树" class="headerlink" title="算法第一题 – 在大的树中寻找子树"></a>算法第一题 – 在大的树中寻找子树</h1><h2 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h2><p><code>有两个不同大小的二叉树： T1 有上百万的节点； T2 有好几百的节点。请设计一种算法，判定 T2 是否为 T1的子树。</code><br>值得注意的地方</p>
 <ul>
-<li>在最后的合并剩余部分 可以直接把链表接上 不需要遍历了！！</li>
+<li>T1有上百万节点 – 可能后期需要考虑优化，若使用递归会不会导致递归层数过多。</li>
+<li>什么叫子树（这是一个大坑）</li>
+<li>待续</li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/15/2018-01-15-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Luyunyyyyy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lyy 的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/15/2018-01-15-hexo/" itemprop="url">Hexo-从零开始</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-15T20:32:40+08:00">
-                2018-01-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  101 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>目标</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关于树的题一开始肯定是想到递归。这个题比较自然的想法就是使用递归的方式来查找。<br>判断当前的树是否相同，若相同则分别查看子树是否相同，若不相同，则分别再对子树进行搜索。</p>
+<h3 id="初期的错误"><a href="#初期的错误" class="headerlink" title="初期的错误"></a>初期的错误</h3><p>但是我在第一次写的时候犯了一个错误。直接写了一个函数，然后来调用自身。后来发现跑不通。回想了一下，好像通常递归的函数会有一个类似 driver的函数来调用递归的函数。<br>还有一个错误就是没有想清楚递归的方式和每次递归要做的事情。</p>
+<p>##写代码时需要注意的事情<br><strong>一定要注意空指针或者 NULL </strong><br>在 Java 中需要注意 null 的因素。同时，不光在写程序的时候，注意调用对象方法的时候，该对象是不是 null。还要注意问题的边界情况，输入的数据会不会是 null ，如果是 null 会不会是某种特别情况。<br>在该题中，若 T2 是 null ，则说明 T2是一个空树。可以认为空树是任何树的一个子树。这时候就要注意这种情况。</p>
+<h2 id="过程中遇到的问题"><a href="#过程中遇到的问题" class="headerlink" title="过程中遇到的问题"></a>过程中遇到的问题</h2><p><strong>最重要的就是对于子树的定义问题！！</strong><br>我认为的子树：只要有一部分结构相同即可。例如T2是T1中间的一部分<br>题目认为的子树：必须完全相同，即1和2相同的节点的儿子均相同，即为空则都为空。<br>//此处应上图</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>//上图<br>该题可以分解为两个部分</p>
 <ul>
-<li>解析为两个部分<ul>
-<li>国外访问Github</li>
-<li>国内访问Coding.net</li>
+<li>对树进行遍历：Traverse方法</li>
+<li>判断T1和T2两个树是否相同，相同即为子树。isSubTree<br>那么可以分为两个函数：一个函数 Traverse 负责遍历树。即当T1的不为空的时候，对当前根节点调用isSubTree。若当前节点下的树同T2不相同，则分别对T1的左右子树调用isSubTree。<br>isSubTree函数的主要职责是判断两个树是否相同。这里需要注意传入参数为空的情况。因为是在T1中寻找T2，所以存在在运行过程中，T2为null的情况。这里需要注意，在isSubTree函数中，当T1等于T2等于null的时候，是结束的情况，说明两个树完全相同，到达最底层节点。当T1和T2中，有一个为null时，说明不相同返回false。当节点的值不相同的时候说明肯定为假。最后返回一个递归的，同时对左右子树调用的表达式。//此处应重构<br>值得注意的是需要分辨在两个函数递归调用的过程中什么时候是T1传入子树，T2不变。什么时候T2也要传入相同的子树。</li>
 </ul>
-</li>
-<li>SEO</li>
-</ul>
-<p>步骤</p>
+<h2 id="后续的内容"><a href="#后续的内容" class="headerlink" title="后续的内容"></a>后续的内容</h2><p>以后争取每次刷题都要写一个总结的内容，尤其是中间遇到很大问题的。同时还要在leetcode上找一下相关的题。有很多大神的黑魔法。在写这个题的时候遇到了点问题然后发现大神真的厉害。直接把树变成字符串然后使用子串查找的方法。<br>//todo</p>
 <ul>
-<li>Hexo 安装<ul>
-<li>前置<ul>
-<li>Node.js</li>
-<li>Git</li>
+<li>重构文章</li>
+<li>画图</li>
+<li>分析大神代码</li>
+<li>重新写1~2遍代码</li>
+<li>2017-12-22 21:14:43</li>
 </ul>
-</li>
-<li>npm install -g hexo-cli</li>
-<li>在指定目录进行hexo init</li>
-</ul>
-</li>
-<li>目录结构</li>
-<li>配置文件</li>
-</ul>
-<p>问题</p>
-<pre><code>- WARN  No layout
-    - Hexo的主题格式不对，我使用的next。theme下文件夹直接改为next
-- 向Github部署的时候发生错误
-- 
-</code></pre><p><img src="./_image/2018-01-15-20-39-57.jpg" alt=""></p>
-<p><img src="./_image/2018-01-15-20-38-37.jpg" alt=""><br>解决方式<br>npm install hexo-deployer-git –save</p>
 
           
         
@@ -1917,7 +1896,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
