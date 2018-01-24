@@ -4,11 +4,30 @@
 
     
   <url>
-    <loc>http://luyunyyyyy.com/2018/01/23/2018-01-23-add-two-numbers/</loc>
-    <lastmod>2018-01-24T01:57:04.534Z</lastmod>
+    <loc>http://luyunyyyyy.com/2018/01/24/2018-01-24-add-two-numbers/</loc>
+    <lastmod>2018-01-24T02:06:33.874Z</lastmod>
     <data>
         <display>
         <title>Add Two Numbers</title>
+        <pubTime>2018-01-24T02:03:53.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+        <tag>链表</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://luyunyyyyy.com/2018/01/23/2018-01-23-two-sum/</loc>
+    <lastmod>2018-01-24T02:03:07.457Z</lastmod>
+    <data>
+        <display>
+        <title>Two Sum</title>
         <pubTime>2018-01-23T15:40:50.000Z</pubTime>
         
         <tag>算法</tag>

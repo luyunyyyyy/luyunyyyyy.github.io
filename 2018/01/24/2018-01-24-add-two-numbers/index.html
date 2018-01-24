@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法," />
+  <meta name="keywords" content="算法,链表," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="LeetCode 第一题 DescriptionGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you">
-<meta name="keywords" content="算法">
+<meta name="description" content="DescriptionYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers a">
+<meta name="keywords" content="算法,链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Add Two Numbers">
-<meta property="og:url" content="http://luyunyyyyy.com/2018/01/23/2018-01-23-add-two-numbers/index.html">
+<meta property="og:url" content="http://luyunyyyyy.com/2018/01/24/2018-01-24-add-two-numbers/index.html">
 <meta property="og:site_name" content="lyy 的个人博客">
-<meta property="og:description" content="LeetCode 第一题 DescriptionGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you">
+<meta property="og:description" content="DescriptionYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T01:57:04.534Z">
+<meta property="og:updated_time" content="2018-01-24T02:06:33.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add Two Numbers">
-<meta name="twitter:description" content="LeetCode 第一题 DescriptionGiven an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you">
+<meta name="twitter:description" content="DescriptionYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers a">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://luyunyyyyy.com/2018/01/23/2018-01-23-add-two-numbers/"/>
+  <link rel="canonical" href="http://luyunyyyyy.com/2018/01/24/2018-01-24-add-two-numbers/"/>
 
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/23/2018-01-23-add-two-numbers/">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/24/2018-01-24-add-two-numbers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyunyyyyy">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T23:40:50+08:00">
-                2018-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T10:03:53+08:00">
+                2018-01-24
               </time>
             
 
@@ -324,7 +324,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  430 字
+                  264 字
                 </span>
               
 
@@ -340,7 +340,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -361,18 +361,10 @@
       
 
       
-        <p>LeetCode 第一题</p>
-<h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.<br>You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure></p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="暴力搜索"><a href="#暴力搜索" class="headerlink" title="暴力搜索"></a>暴力搜索</h2><p>使用一个二重循环进行遍历，判断是否有符合条件的数。符合就返回一个数组。<br>这里遇到一个小问题，Java 中如何创建数组。</p>
-<h3 id="Java-中创建数组的几种方式"><a href="#Java-中创建数组的几种方式" class="headerlink" title="Java 中创建数组的几种方式"></a>Java 中创建数组的几种方式</h3><ol>
-<li>type[] arrayRefVar; 或 type arrayRefVar[]; arrayRefVar = new dataType[arraySize];</li>
-<li>arrayName = new type[]{element1,element2,element3…}</li>
-<li>或者使用简化的语法格式: arrayName = {element1,element2,element3…}</li>
-</ol>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        for(int i = 0; i &lt; nums.length; i++)&#123;</span><br><span class="line">            for(int j = i + 1; j &lt; nums.length; j++)&#123;</span><br><span class="line">                if(nums[j] == (target - nums[i]))&#123;</span><br><span class="line">                    return new int[]&#123;i,j&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return new int[]&#123;&#125;;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="使用-Map-的解法"><a href="#使用-Map-的解法" class="headerlink" title="使用 Map 的解法"></a>使用 Map 的解法</h2><p>使用了时间复杂度为O(n^2)的暴力搜索后，需要考虑有没有更快的方法来实现。<br>网上查找到，可以使用 Map 保存数组的中间结果。<br>即原数组存储可认为是&lt;索引，数值&gt;<br>需要更新为&lt;数值，索引&gt;<br>在第二次遍历中，就可以对当前数值和给定的目标求差，通过这个差值在 Map 中寻找相应的索引 </p>
-<h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int[] result = new int[2];</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        for(int i = 0; i &lt; nums.length ;i++)&#123;</span><br><span class="line">            map.put(nums[i], i);</span><br><span class="line">            //是一个 &lt;数值，位置&gt; 的 Map</span><br><span class="line">        &#125;</span><br><span class="line">        int value = 0;</span><br><span class="line">        for(int j = 0; j &lt; nums.length ; j++)&#123;</span><br><span class="line">            value = target - nums[j];</span><br><span class="line">            if(map.containsKey(value) &amp;&amp; map.get(value) != j)&#123;</span><br><span class="line">                result[0] = map.get(value);</span><br><span class="line">                result[1] = j;</span><br><span class="line">                return result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return result;</span><br></pre></td></tr></table></figure>
-
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>Example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">Output: 7 -&gt; 0 -&gt; 8</span><br><span class="line">Explanation: 342 + 465 = 807.</span><br></pre></td></tr></table></figure></p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这个题是一道使用链表进行整数加法运算的题。<br>需要考虑进位和两个链表长度不同的情况。<br>在最后需要对末尾进行特殊操作。即最后一位进位为1。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public ListNode addTwoNumbers(ListNode l1, ListNode l2) &#123;</span><br><span class="line">        int newValue = 0;</span><br><span class="line">        int nextNewValue = 0;</span><br><span class="line">        int num1,num2 = 0;</span><br><span class="line">        ListNode result = new ListNode(0);</span><br><span class="line">        ListNode temp = result;</span><br><span class="line">        while(l1 != null || l2 != null)&#123;</span><br><span class="line">            num1 = l1 != null ? l1.val:0;</span><br><span class="line">            num2 = l2 != null ? l2.val:0;</span><br><span class="line">            newValue = num1 + num2 + nextNewValue;</span><br><span class="line">            nextNewValue = 0;</span><br><span class="line">            if(newValue &gt;=10)&#123;</span><br><span class="line">                newValue = newValue - 10;</span><br><span class="line">                nextNewValue ++;</span><br><span class="line">            &#125;</span><br><span class="line">            //temp.val = newValue;</span><br><span class="line">            temp.next = new ListNode(newValue);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">            if(l1 != null)</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            if(l2 != null)</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        if(nextNewValue == 1)&#123;</span><br><span class="line">            temp.next = new ListNode(1);</span><br><span class="line">        &#125;</span><br><span class="line">        return result.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -391,6 +383,8 @@
           
             <a href="/tags/算法/" rel="tag"># 算法</a>
           
+            <a href="/tags/链表/" rel="tag"># 链表</a>
+          
         </div>
       
 
@@ -402,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/22/2018-01-22-copy-list-with-random-pointer/" rel="next" title="复制带随机指针的链表">
-                <i class="fa fa-chevron-left"></i> 复制带随机指针的链表
+              <a href="/2018/01/23/2018-01-23-two-sum/" rel="next" title="Two Sum">
+                <i class="fa fa-chevron-left"></i> Two Sum
               </a>
             
           </div>
@@ -487,7 +481,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -535,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#暴力搜索"><span class="nav-number">2.1.</span> <span class="nav-text">暴力搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-中创建数组的几种方式"><span class="nav-number">2.1.1.</span> <span class="nav-text">Java 中创建数组的几种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">2.1.2.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Map-的解法"><span class="nav-number">2.2.</span> <span class="nav-text">使用 Map 的解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.2.</span> <span class="nav-text">实现</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -569,7 +563,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.7k</span>
+    <span title="Site words total count">4.9k</span>
   
 </div>
 
