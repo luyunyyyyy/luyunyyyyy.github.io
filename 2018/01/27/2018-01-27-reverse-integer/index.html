@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,字符串," />
+  <meta name="keywords" content="算法," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目内容12给定两个字符串，请设计一个方法来判定其中一个字符串是否为另一个字符串的置换。置换的意思是，通过改变顺序可以使得两个字符串相等。 给出的示例如 abc 是 cba 的置换aabc 不是 abcc 的置换 边界条件首先要考虑输入数据的边界情况。  字符串有 null 字符串为 &amp;quot;&amp;quot; 字符串大小不相等  思路二逼青年思路把两个字符串分别保存成两个 HashMap 存储每个">
-<meta name="keywords" content="算法,字符串">
+<meta name="description" content="题目1234567891011121314Given a 32-bit signed integer, reverse digits of an integer.Example 1:Input: 123Output:  321Example 2:Input: -123Output: -321Example 3:Input: 120Output: 21 思路异常情况需要考虑到的特殊情况  输入的数正">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="字符串置换">
-<meta property="og:url" content="http://luyunyyyyy.com/2018/01/20/2018-01-20-string-permutation/index.html">
+<meta property="og:title" content="Reverse Integer">
+<meta property="og:url" content="http://luyunyyyyy.com/2018/01/27/2018-01-27-reverse-integer/index.html">
 <meta property="og:site_name" content="lyy 的个人博客">
-<meta property="og:description" content="题目内容12给定两个字符串，请设计一个方法来判定其中一个字符串是否为另一个字符串的置换。置换的意思是，通过改变顺序可以使得两个字符串相等。 给出的示例如 abc 是 cba 的置换aabc 不是 abcc 的置换 边界条件首先要考虑输入数据的边界情况。  字符串有 null 字符串为 &amp;quot;&amp;quot; 字符串大小不相等  思路二逼青年思路把两个字符串分别保存成两个 HashMap 存储每个">
+<meta property="og:description" content="题目1234567891011121314Given a 32-bit signed integer, reverse digits of an integer.Example 1:Input: 123Output:  321Example 2:Input: -123Output: -321Example 3:Input: 120Output: 21 思路异常情况需要考虑到的特殊情况  输入的数正">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-20T13:45:40.385Z">
+<meta property="og:updated_time" content="2018-01-27T03:31:35.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="字符串置换">
-<meta name="twitter:description" content="题目内容12给定两个字符串，请设计一个方法来判定其中一个字符串是否为另一个字符串的置换。置换的意思是，通过改变顺序可以使得两个字符串相等。 给出的示例如 abc 是 cba 的置换aabc 不是 abcc 的置换 边界条件首先要考虑输入数据的边界情况。  字符串有 null 字符串为 &amp;quot;&amp;quot; 字符串大小不相等  思路二逼青年思路把两个字符串分别保存成两个 HashMap 存储每个">
+<meta name="twitter:title" content="Reverse Integer">
+<meta name="twitter:description" content="题目1234567891011121314Given a 32-bit signed integer, reverse digits of an integer.Example 1:Input: 123Output:  321Example 2:Input: -123Output: -321Example 3:Input: 120Output: 21 思路异常情况需要考虑到的特殊情况  输入的数正">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://luyunyyyyy.com/2018/01/20/2018-01-20-string-permutation/"/>
+  <link rel="canonical" href="http://luyunyyyyy.com/2018/01/27/2018-01-27-reverse-integer/"/>
 
 
 
 
 
-  <title>字符串置换 | lyy 的个人博客</title>
+  <title>Reverse Integer | lyy 的个人博客</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/20/2018-01-20-string-permutation/">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/27/2018-01-27-reverse-integer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Luyunyyyyy">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">字符串置换</h1>
+          <h1 class="post-title" itemprop="name headline">Reverse Integer</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T21:24:34+08:00">
-                2018-01-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T11:29:27+08:00">
+                2018-01-27
               </time>
             
 
@@ -324,7 +324,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  352 字
+                  161 字
                 </span>
               
 
@@ -361,18 +361,12 @@
       
 
       
-        <h1 id="题目内容"><a href="#题目内容" class="headerlink" title="题目内容"></a>题目内容</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">给定两个字符串，请设计一个方法来判定其中一个字符串是否为另一个字符串的置换。</span><br><span class="line">置换的意思是，通过改变顺序可以使得两个字符串相等。</span><br></pre></td></tr></table></figure>
-<h2 id="给出的示例"><a href="#给出的示例" class="headerlink" title="给出的示例"></a>给出的示例</h2><p>如 <code>abc</code> 是 <code>cba</code> 的置换<br><code>aabc</code> 不是 <code>abcc</code> 的置换</p>
-<h1 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h1><p>首先要考虑输入数据的边界情况。</p>
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Given a 32-bit signed integer, reverse digits of an integer.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: 123</span><br><span class="line">Output:  321</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: -123</span><br><span class="line">Output: -321</span><br><span class="line">Example 3:</span><br><span class="line"></span><br><span class="line">Input: 120</span><br><span class="line">Output: 21</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h2 id="异常情况"><a href="#异常情况" class="headerlink" title="异常情况"></a>异常情况</h2><p>需要考虑到的特殊情况</p>
 <ul>
-<li>字符串有 null</li>
-<li>字符串为 <code>&quot;&quot;</code></li>
-<li>字符串大小不相等</li>
+<li>输入的数正常，逆序后大于<code>int</code>的最大范围</li>
+<li>最后一位为0 逆序后第一位要去掉<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1>使用<code>long</code>保存中间的运行结果<br>在最后与<code>Integer.MAX_VALUE</code>&amp;<code>Integer .MIN_VALUE</code>进行比较<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int reverse(int x) &#123;</span><br><span class="line">        long result = 0;</span><br><span class="line">        while(x != 0)&#123;</span><br><span class="line">            result = result * 10 + x % 10;</span><br><span class="line">            x = x / 10;</span><br><span class="line">        &#125;</span><br><span class="line">        return result &gt; (double)Integer.MAX_VALUE || result &lt; (double)Integer .MIN_VALUE ? 0 : (int)result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h2 id="二逼青年思路"><a href="#二逼青年思路" class="headerlink" title="二逼青年思路"></a>二逼青年思路</h2><p>把两个字符串分别保存成两个 HashMap 存储每个字符的出现次数。<br>这就需要把两个字符数组变成 HashMap。然后比较两个 Map</p>
-<h2 id="普通青年思路"><a href="#普通青年思路" class="headerlink" title="普通青年思路"></a>普通青年思路</h2><p>对两个字符数据进行排序，若排序结果相同则表示两个字符串中字符的出现频率相同。</p>
-<h2 id="文艺青年思路"><a href="#文艺青年思路" class="headerlink" title="文艺青年思路"></a>文艺青年思路</h2><p>还是使用 Map<br>但是在每次遍历的时候都同时操作两个字符串。若 A 中存在则该字符加一，若 B 中存在则减一。同时保持 Map 中 value 为0的不存在，去除掉。即最后只要判断 Map 大小是否为0.</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">if(A == null || B == null || A.length() != B.length())</span><br><span class="line">            return false;</span><br><span class="line">        char a[] = A.toCharArray();</span><br><span class="line">        char b[] = B.toCharArray();</span><br><span class="line"></span><br><span class="line">        Arrays.sort(a);</span><br><span class="line">        Arrays.sort(b);</span><br><span class="line">        for(int i = 0 ; i &lt; A.length() ; i++)&#123;</span><br><span class="line">            if(a[i] != b[i])&#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return true;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -392,8 +386,6 @@
           
             <a href="/tags/算法/" rel="tag"># 算法</a>
           
-            <a href="/tags/字符串/" rel="tag"># 字符串</a>
-          
         </div>
       
 
@@ -405,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/18/2018-01-17-numpy/" rel="next" title="Numpy 笔记">
-                <i class="fa fa-chevron-left"></i> Numpy 笔记
+              <a href="/2018/01/25/2018-01-25-todo-in-winter/" rel="next" title="放假要做的事情">
+                <i class="fa fa-chevron-left"></i> 放假要做的事情
               </a>
             
           </div>
@@ -414,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/21/2017-01-21-binary-tree-postorder-traversal/" rel="prev" title="二叉树的后序遍历">
-                二叉树的后序遍历 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -542,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目内容"><span class="nav-number">1.</span> <span class="nav-text">题目内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#给出的示例"><span class="nav-number">1.1.</span> <span class="nav-text">给出的示例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#边界条件"><span class="nav-number">2.</span> <span class="nav-text">边界条件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二逼青年思路"><span class="nav-number">3.1.</span> <span class="nav-text">二逼青年思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#普通青年思路"><span class="nav-number">3.2.</span> <span class="nav-text">普通青年思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文艺青年思路"><span class="nav-number">3.3.</span> <span class="nav-text">文艺青年思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.4.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常情况"><span class="nav-number">2.1.</span> <span class="nav-text">异常情况</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
