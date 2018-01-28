@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://luyunyyyyy.com/2018/01/28/2018-01-28-trailing-zeros/</loc>
+    <lastmod>2018-01-28T15:31:10.095Z</lastmod>
+    <data>
+        <display>
+        <title>尾部的零</title>
+        <pubTime>2018-01-28T15:10:19.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://luyunyyyyy.com/2018/01/28/2018-01-28-a-b-problem/</loc>
-    <lastmod>2018-01-28T15:02:18.604Z</lastmod>
+    <lastmod>2018-01-28T15:09:50.394Z</lastmod>
     <data>
         <display>
         <title>A + B 问题</title>
@@ -136,9 +153,9 @@
         <title>二叉树的后序遍历</title>
         <pubTime>2018-01-21T14:58:20.000Z</pubTime>
         
-        <tag>算法</tag>
-         
         <tag>二叉树</tag>
+         
+        <tag>算法</tag>
          
          
            
@@ -174,9 +191,9 @@
         <title>二叉树的路径和</title>
         <pubTime>2018-01-18T02:18:05.000Z</pubTime>
         
-        <tag>算法</tag>
-         
         <tag>二叉树</tag>
+         
+        <tag>算法</tag>
          
          
            

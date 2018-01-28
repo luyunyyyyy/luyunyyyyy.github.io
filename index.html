@@ -262,6 +262,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/28/2018-01-28-trailing-zeros/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyunyyyyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lyy 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/28/2018-01-28-trailing-zeros/" itemprop="url">尾部的零</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-28T23:10:19+08:00">
+                2018-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  273 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>设计一个算法，计算出n阶乘中尾部零的个数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11! = 39916800，因此应该返回 2</span><br></pre></td></tr></table></figure></p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><h2 id="错误尝试"><a href="#错误尝试" class="headerlink" title="错误尝试"></a>错误尝试</h2><p>一开始想的比较单纯，只考虑到了阶乘过程中5的倍数的个数。选择返回 <code>n / 5</code><br>但是显然是错误的，如25就提供了两个 5 的因子， 125 则提供了三个因子。</p>
+<h2 id="超时的解法"><a href="#超时的解法" class="headerlink" title="超时的解法"></a>超时的解法</h2><p>后来发现了问题，选择做一个<code>range( n )</code>的遍历。遍历每个数字，求出因子为 5 的个数。这个过程中还要对每个数字进行遍历，求出因子数量。大致时间复杂度为O(N^2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">long count = 0;</span><br><span class="line">long temp;</span><br><span class="line">for(long i = 1 ; i &lt;= n ; i++)&#123;</span><br><span class="line">    temp = i;</span><br><span class="line">    while(temp % 5 == 0)&#123;</span><br><span class="line">        temp = temp / 5;</span><br><span class="line">        count ++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="正确解法"><a href="#正确解法" class="headerlink" title="正确解法"></a>正确解法</h2><p>在阶乘过程中，只有5的倍数的数字会提供因子。同时，如: 25 提供 2; 125 提供 3.<br>解法的具体描述及复杂度。<br><a href="https://www.cnblogs.com/AndyJee/p/4612314.html" target="_blank" rel="noopener">https://www.cnblogs.com/AndyJee/p/4612314.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">long count = 0;</span><br><span class="line">while( n &gt; 0)&#123;</span><br><span class="line">    count += n/5;</span><br><span class="line">    n = n / 5;</span><br><span class="line">&#125;</span><br><span class="line">return count;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/28/2018-01-28-a-b-problem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -367,7 +521,7 @@
             <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。</p>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>发现一遇到位运算相关的题就缺乏思路，不知道如何下手。可能需要专门训练一下相关的问题。<br>该题的要求是求和，最后的结果相当于两个数字相加:不进位、仅对每位数字求和，即异或；只取进位部分，即进行且运算，然后左移一位。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h2><p>求出 a b 的异或和交的移位，然后递归<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(b == 0)</span><br><span class="line">    return a;</span><br><span class="line">int n1 = a ^ b;</span><br><span class="line">int n2 = (a &amp; b) &lt;&lt; 1;</span><br><span class="line">return aplusb(n1, n2);</span><br></pre></td></tr></table></figure></p>
-<h2 id="遍历实现"><a href="#遍历实现" class="headerlink" title="遍历实现"></a>遍历实现</h2><p>实现过程相同，只是每次更新 n1 和 n2 的值</p>
+<h2 id="遍历实现"><a href="#遍历实现" class="headerlink" title="遍历实现"></a>遍历实现</h2><p>实现过程相同，只是每次更新 n1 和 n2 的值。</p>
 
           
         
@@ -1662,165 +1816,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/18/2018-01-17-numpy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Luyunyyyyy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lyy 的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/18/2018-01-17-numpy/" itemprop="url">Numpy 笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-18T10:48:30+08:00">
-                2018-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  44 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h1><p>避免写 for 循环</p>
-<h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><p><code>a = np.array([1,2,3,4])</code></p>
-<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = np.random.rand(10000)</span><br><span class="line">b = np.random.rand(10000)</span><br><span class="line">c = np.dot(a,b)</span><br></pre></td></tr></table></figure>
-<h2 id="e的指数次幂"><a href="#e的指数次幂" class="headerlink" title="e的指数次幂"></a>e的指数次幂</h2><p><code>np.exp(V)</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1866,7 +1866,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1932,7 +1932,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.4k</span>
+    <span title="Site words total count">5.7k</span>
   
 </div>
 

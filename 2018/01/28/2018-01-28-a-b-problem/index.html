@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="lyy 的个人博客">
 <meta property="og:description" content="题目给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 思路发现一遇到位运算相关的题就缺乏思路，不知道如何下手。可能需要专门训练一下相关的问题。该题的要求是求和，最后的结果相当于两个数字相加:不进位、仅对每位数字求和，即异或；只取进位部分，即进行且运算，然后左移一位。 代码递归实现求出 a b 的异或和交的移位，然后递归12345if(b == 0)    return a;int">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-28T15:02:18.604Z">
+<meta property="og:updated_time" content="2018-01-28T15:09:50.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A + B 问题">
 <meta name="twitter:description" content="题目给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 思路发现一遇到位运算相关的题就缺乏思路，不知道如何下手。可能需要专门训练一下相关的问题。该题的要求是求和，最后的结果相当于两个数字相加:不进位、仅对每位数字求和，即异或；只取进位部分，即进行且运算，然后左移一位。 代码递归实现求出 a b 的异或和交的移位，然后递归12345if(b == 0)    return a;int">
@@ -364,7 +364,7 @@
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。</p>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>发现一遇到位运算相关的题就缺乏思路，不知道如何下手。可能需要专门训练一下相关的问题。<br>该题的要求是求和，最后的结果相当于两个数字相加:不进位、仅对每位数字求和，即异或；只取进位部分，即进行且运算，然后左移一位。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="递归实现"><a href="#递归实现" class="headerlink" title="递归实现"></a>递归实现</h2><p>求出 a b 的异或和交的移位，然后递归<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(b == 0)</span><br><span class="line">    return a;</span><br><span class="line">int n1 = a ^ b;</span><br><span class="line">int n2 = (a &amp; b) &lt;&lt; 1;</span><br><span class="line">return aplusb(n1, n2);</span><br></pre></td></tr></table></figure></p>
-<h2 id="遍历实现"><a href="#遍历实现" class="headerlink" title="遍历实现"></a>遍历实现</h2><p>实现过程相同，只是每次更新 n1 和 n2 的值</p>
+<h2 id="遍历实现"><a href="#遍历实现" class="headerlink" title="遍历实现"></a>遍历实现</h2><p>实现过程相同，只是每次更新 n1 和 n2 的值。</p>
 
       
     </div>
@@ -406,6 +406,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/28/2018-01-28-trailing-zeros/" rel="prev" title="尾部的零">
+                尾部的零 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -482,7 +486,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -564,7 +568,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.4k</span>
+    <span title="Site words total count">5.7k</span>
   
 </div>
 
