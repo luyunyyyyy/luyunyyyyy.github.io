@@ -262,6 +262,401 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/02/21/操作系统-Coursera/2018-02-21-OS-WEEK1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyunyyyyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lyy 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/21/操作系统-Coursera/2018-02-21-OS-WEEK1/" itemprop="url">操作系统概述</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-21T16:02:42+08:00">
+                2018-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  892 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><ul>
+<li>操作系统做了什么</li>
+<li>操作系统的定义与作用</li>
+<li>操作系统的主要特征</li>
+<li>典型操作系统的架构</li>
+<li>操作系统的分类</li>
+</ul>
+<h1 id="操作系统做了什么"><a href="#操作系统做了什么" class="headerlink" title="操作系统做了什么"></a>操作系统做了什么</h1><p>操作系统执行一个C语言的程序会发生什么？？</p>
+<p><img src="http://p4hrageik.bkt.clouddn.com/操作系统-Coursera/_image/2018-02-21-16-08-05.jpg" alt=""></p>
+<ul>
+<li>用户:告诉操作系统执行程序<ul>
+<li>通过命令行</li>
+<li>点击图标</li>
+</ul>
+</li>
+<li>OS<ul>
+<li>找到程序的相关信息</li>
+<li>检查其类型是否为可执行文件</li>
+<li>通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址</li>
+</ul>
+</li>
+<li>OS<ul>
+<li>创建一个新的进程，将可执行文件映射到该进程结构，表示由该进程执行程序</li>
+<li>为程序设置CPU上下文环境并跳到程序开始初。</li>
+</ul>
+</li>
+<li>执行程序第一条指令，发生<strong>缺页异常</strong></li>
+<li>OS:分配一页物理内存，并将代码从磁盘读入内存然后执行程序</li>
+<li>执行puts函数，在显示器上写字符串</li>
+<li>OS:找到待送往的设备，通常设备由一个进程控制。所以OS把字符串送给进程</li>
+<li>显示器上显示相应字符串…(省略硬件过程)</li>
+</ul>
+<p>CPU 时而执行用户程序，时而执行操作系统程序。</p>
+<h1 id="操作系统的定义和作用"><a href="#操作系统的定义和作用" class="headerlink" title="操作系统的定义和作用"></a>操作系统的定义和作用</h1><h2 id="操作系统是什么？"><a href="#操作系统是什么？" class="headerlink" title="操作系统是什么？"></a>操作系统是什么？</h2><p>操作系统是一个系统软件，一些程序模块的集合。</p>
+<ul>
+<li>尽量有效合理的组织和管理计算机软硬件资源</li>
+<li>合理组织工作流程、控制程序的执行、向用户提供各种服务功能。</li>
+<li>使用户能够灵活方便的使用计算机。使整个计算机系统高效运行。<h2 id="KEY-WORD"><a href="#KEY-WORD" class="headerlink" title="KEY WORD"></a>KEY WORD</h2></li>
+<li>有效: 系统效率，资源利用率</li>
+<li>合理: 公平合理管理资源</li>
+<li>方便使用: 用户界面；编程接口<h1 id="操作系统的三个作用"><a href="#操作系统的三个作用" class="headerlink" title="操作系统的三个作用"></a><strong>操作系统的三个作用</strong></h1></li>
+<li>资源的提供者 -&gt; <strong>有效</strong></li>
+<li>向用户提供各种服务 -&gt; <strong>方便使用</strong></li>
+<li>对硬件机器的扩展 -&gt; <strong>扩展能力</strong><h2 id="OS是资源的管理者"><a href="#OS是资源的管理者" class="headerlink" title="OS是资源的管理者"></a>OS是资源的管理者</h2>自底向上的来说，操作系统负责管理资源。资源包括硬件资源和软件资源。<h3 id="怎样管理资源？？"><a href="#怎样管理资源？？" class="headerlink" title="怎样管理资源？？"></a>怎样管理资源？？</h3></li>
+<li>跟踪记录资源的使用情况 – 数据结构</li>
+<li>确定资源分配策略 – 算法<ul>
+<li>动态 &amp; 静态</li>
+</ul>
+</li>
+<li>实施资源的分配和回收</li>
+<li>提高资源利用率</li>
+<li>保护资源的使用</li>
+<li>协调多个进程对资源请求的冲突<h3 id="从资源管理的角度-五大基本功能"><a href="#从资源管理的角度-五大基本功能" class="headerlink" title="从资源管理的角度 - 五大基本功能"></a>从资源管理的角度 - 五大基本功能</h3></li>
+</ul>
+<ol>
+<li>进程/线程管理</li>
+<li>存储管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+<li>用户结构<h2 id="OS是各种系统服务的提供者"><a href="#OS是各种系统服务的提供者" class="headerlink" title="OS是各种系统服务的提供者"></a>OS是各种系统服务的提供者</h2>从用户角度来看，操作系统为用户提供了一组强大的方便使用的命令或者系统调用<h3 id="OS是硬件之上的第一层软件"><a href="#OS是硬件之上的第一层软件" class="headerlink" title="OS是硬件之上的第一层软件"></a>OS是硬件之上的第一层软件</h3>相比应用程序来说，与硬件相关的工作复杂繁琐。所以需要操作系统帮助我们进行抽象<br>应用程序</li>
+</ol>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>虚拟机器界面<br>操作系统</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>物理机器界面<br>硬件<h3 id="OS对硬件机器的扩展"><a href="#OS对硬件机器的扩展" class="headerlink" title="OS对硬件机器的扩展"></a>OS对硬件机器的扩展</h3>操作系统在应用程序和硬件之间建立了一个等价的扩展机器<br>作用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对硬件抽象，提高可移植性</li>
+<li>笔底层硬件更容易编程<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>操作系统的三个作用</li>
+<li>有效地管理资源</li>
+<li>通过命令接口、编程接口等为用户提供各种功能服务</li>
+<li>对硬件机器的扩展</li>
+<li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/02/09/Java/2018-02-09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyunyyyyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lyy 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/09/Java/2018-02-09/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-09T21:42:46+08:00">
+                2018-02-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/28/2018-01-28-merge-two-sorted-arrays/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1490,321 +1885,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/22/2018-01-22-copy-list-with-random-pointer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Luyunyyyyy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lyy 的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/22/2018-01-22-copy-list-with-random-pointer/" itemprop="url">复制带随机指针的链表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T09:31:57+08:00">
-                2018-01-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  435 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">给出一个链表，每个节点包含一个额外增加的随机指针可以指向链表中的任何节点或空的节点。</span><br><span class="line">返回一个深拷贝的链表。</span><br></pre></td></tr></table></figure>
-<p>一开始看这个题也是有些懵逼的，好像没读明白是什么意思。简单的认为类似普通的链表深拷贝。后来在网上查询时发现是要考虑随机指针的问题。随机指针可能指向任意节点或者空的节点，那在遍历每个节点的时候还需要再遍历其他的节点以更新随机指针。这样时间使用过多。</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><h2 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h2><p>使用HashMap保存指针的更新，在做链表深拷贝遍历的时候把旧节点和新节点的指针放入map</p>
-<p><oldp, newp=""><br>这样可以再进行第二次循环，更新随机指针。<br>代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public RandomListNode copyRandomList(RandomListNode head) &#123;</span><br><span class="line">        // write your code here</span><br><span class="line">        if(head == null)</span><br><span class="line">            return null;</span><br><span class="line">        RandomListNode temp = head;</span><br><span class="line">        RandomListNode result = new RandomListNode(0);</span><br><span class="line">        RandomListNode re = result;</span><br><span class="line">        Map&lt;RandomListNode,RandomListNode&gt; map = new HashMap&lt;&gt;();</span><br><span class="line">        while(temp != null)&#123;</span><br><span class="line">            result.next = new RandomListNode(temp.label);</span><br><span class="line">            map.put(temp,result.next);</span><br><span class="line">            temp = temp.next;</span><br><span class="line">            result = result.next;</span><br><span class="line">        &#125;</span><br><span class="line">        result = re.next;</span><br><span class="line">        temp = head;</span><br><span class="line">        while(result != null)&#123;</span><br><span class="line">            result.random = map.get(temp.random);</span><br><span class="line">            result = result.next;</span><br><span class="line">            temp = temp.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return re.next;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></oldp,></p>
-<p>遇到的问题<br>HashMap 保存的是旧节点指针和新节点指针。get的时候需要注意<code>result.random = map.get(temp.random);</code>需要传入旧链表节点的random，获得对应的新指针</p>
-<h2 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h2><ul>
-<li>在原链表每个节点末尾拷贝出一个新节点</li>
-<li>然后更新链表中新节点的random指针 </li>
-<li>间隔的断开链表<br>解法链接<br><a href="https://www.cnblogs.com/grandyang/p/4261431.html" target="_blank" rel="noopener">https://www.cnblogs.com/grandyang/p/4261431.html</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/01/21/2017-01-21-binary-tree-postorder-traversal/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Luyunyyyyy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lyy 的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/21/2017-01-21-binary-tree-postorder-traversal/" itemprop="url">二叉树的后序遍历</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-21T22:58:20+08:00">
-                2018-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  228 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给出一棵二叉树，返回其节点值的后序遍历。</span><br></pre></td></tr></table></figure>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>这是一个简单的二叉树后序遍历的题。就是要求输出是保存到数组中。</p>
-<h2 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h2><p>先左后右最后中。</p>
-<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><p>保存到数组中，可以把数组作为参数传进去。可以认为方法传参为传引用。在递归的过程中可以认为数组对象都是一开始传入的那个参数。</p>
-<h1 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h1><p>传入为空树的情况。<br>需要返回一个空数组。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Integer&gt; postorderTraversal(TreeNode root) &#123;</span><br><span class="line">        // write your code here </span><br><span class="line">                List&lt;Integer&gt; result = new ArrayList&lt;Integer&gt;();</span><br><span class="line">        if(root == null)</span><br><span class="line">            return result;</span><br><span class="line">        postorderTraversal(root,result);</span><br><span class="line">        return result;</span><br><span class="line">    &#125;</span><br><span class="line">    public void postorderTraversal(TreeNode root,List&lt;Integer&gt; array) &#123;</span><br><span class="line">        if(root.left != null)</span><br><span class="line">            postorderTraversal(root.left, array);</span><br><span class="line">        if(root.right != null)</span><br><span class="line">            postorderTraversal(root.right, array);</span><br><span class="line">        // write your code here </span><br><span class="line">        if(root != null)&#123;</span><br><span class="line">            array.add(root.val);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1855,7 +1935,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1868,7 +1948,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1921,7 +2001,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.7k</span>
+    <span title="Site words total count">6.6k</span>
   
 </div>
 
