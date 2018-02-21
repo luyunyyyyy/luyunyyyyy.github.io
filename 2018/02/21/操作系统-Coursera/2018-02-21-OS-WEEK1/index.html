@@ -88,7 +88,7 @@
 <meta property="og:description" content="操作系统概述 操作系统做了什么 操作系统的定义与作用 操作系统的主要特征 典型操作系统的架构 操作系统的分类  操作系统做了什么操作系统执行一个C语言的程序会发生什么？？   用户:告诉操作系统执行程序 通过命令行 点击图标   OS 找到程序的相关信息 检查其类型是否为可执行文件 通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址   OS 创建一个新的进程，将可执行文">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p4hrageik.bkt.clouddn.com/操作系统-Coursera/_image/2018-02-21-16-08-05.jpg">
-<meta property="og:updated_time" content="2018-02-21T08:36:20.536Z">
+<meta property="og:updated_time" content="2018-02-21T08:46:59.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统概述">
 <meta name="twitter:description" content="操作系统概述 操作系统做了什么 操作系统的定义与作用 操作系统的主要特征 典型操作系统的架构 操作系统的分类  操作系统做了什么操作系统执行一个C语言的程序会发生什么？？   用户:告诉操作系统执行程序 通过命令行 点击图标   OS 找到程序的相关信息 检查其类型是否为可执行文件 通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址   OS 创建一个新的进程，将可执行文">
@@ -400,13 +400,20 @@
 <ul>
 <li>尽量有效合理的组织和管理计算机软硬件资源</li>
 <li>合理组织工作流程、控制程序的执行、向用户提供各种服务功能。</li>
-<li>使用户能够灵活方便的使用计算机。使整个计算机系统高效运行。<h2 id="KEY-WORD"><a href="#KEY-WORD" class="headerlink" title="KEY WORD"></a>KEY WORD</h2></li>
+<li>使用户能够灵活方便的使用计算机。使整个计算机系统高效运行。</li>
+</ul>
+<h2 id="KEY-WORD"><a href="#KEY-WORD" class="headerlink" title="KEY WORD"></a>KEY WORD</h2><ul>
 <li>有效: 系统效率，资源利用率</li>
 <li>合理: 公平合理管理资源</li>
-<li>方便使用: 用户界面；编程接口<h1 id="操作系统的三个作用"><a href="#操作系统的三个作用" class="headerlink" title="操作系统的三个作用"></a><strong>操作系统的三个作用</strong></h1></li>
+<li>方便使用: 用户界面；编程接口</li>
+</ul>
+<h1 id="操作系统的三个作用"><a href="#操作系统的三个作用" class="headerlink" title="操作系统的三个作用"></a><strong>操作系统的三个作用</strong></h1><ul>
 <li>资源的提供者 -&gt; <strong>有效</strong></li>
 <li>向用户提供各种服务 -&gt; <strong>方便使用</strong></li>
-<li>对硬件机器的扩展 -&gt; <strong>扩展能力</strong><h2 id="OS是资源的管理者"><a href="#OS是资源的管理者" class="headerlink" title="OS是资源的管理者"></a>OS是资源的管理者</h2>自底向上的来说，操作系统负责管理资源。资源包括硬件资源和软件资源。<h3 id="怎样管理资源？？"><a href="#怎样管理资源？？" class="headerlink" title="怎样管理资源？？"></a>怎样管理资源？？</h3></li>
+<li>对硬件机器的扩展 -&gt; <strong>扩展能力</strong></li>
+</ul>
+<h2 id="OS是资源的管理者"><a href="#OS是资源的管理者" class="headerlink" title="OS是资源的管理者"></a>OS是资源的管理者</h2><p>自底向上的来说，操作系统负责管理资源。资源包括硬件资源和软件资源。</p>
+<h3 id="怎样管理资源？？"><a href="#怎样管理资源？？" class="headerlink" title="怎样管理资源？？"></a>怎样管理资源？？</h3><ul>
 <li>跟踪记录资源的使用情况 – 数据结构</li>
 <li>确定资源分配策略 – 算法<ul>
 <li>动态 &amp; 静态</li>
@@ -415,48 +422,27 @@
 <li>实施资源的分配和回收</li>
 <li>提高资源利用率</li>
 <li>保护资源的使用</li>
-<li>协调多个进程对资源请求的冲突<h3 id="从资源管理的角度-五大基本功能"><a href="#从资源管理的角度-五大基本功能" class="headerlink" title="从资源管理的角度 - 五大基本功能"></a>从资源管理的角度 - 五大基本功能</h3></li>
+<li>协调多个进程对资源请求的冲突</li>
 </ul>
-<ol>
+<h3 id="从资源管理的角度-五大基本功能"><a href="#从资源管理的角度-五大基本功能" class="headerlink" title="从资源管理的角度 - 五大基本功能"></a>从资源管理的角度 - 五大基本功能</h3><ol>
 <li>进程/线程管理</li>
 <li>存储管理</li>
 <li>文件管理</li>
 <li>设备管理</li>
-<li>用户结构<h2 id="OS是各种系统服务的提供者"><a href="#OS是各种系统服务的提供者" class="headerlink" title="OS是各种系统服务的提供者"></a>OS是各种系统服务的提供者</h2>从用户角度来看，操作系统为用户提供了一组强大的方便使用的命令或者系统调用<h3 id="OS是硬件之上的第一层软件"><a href="#OS是硬件之上的第一层软件" class="headerlink" title="OS是硬件之上的第一层软件"></a>OS是硬件之上的第一层软件</h3>相比应用程序来说，与硬件相关的工作复杂繁琐。所以需要操作系统帮助我们进行抽象<br>应用程序</li>
+<li>用户结构</li>
 </ol>
+<h2 id="OS是各种系统服务的提供者"><a href="#OS是各种系统服务的提供者" class="headerlink" title="OS是各种系统服务的提供者"></a>OS是各种系统服务的提供者</h2><p>从用户角度来看，操作系统为用户提供了一组强大的方便使用的命令或者系统调用</p>
+<h3 id="OS是硬件之上的第一层软件"><a href="#OS是硬件之上的第一层软件" class="headerlink" title="OS是硬件之上的第一层软件"></a>OS是硬件之上的第一层软件</h3><p>相比应用程序来说，与硬件相关的工作复杂繁琐。所以需要操作系统帮助我们进行抽象<br>应用程序<br>虚拟机器界面<br>操作系统<br>物理机器界面<br>硬件</p>
+<h3 id="OS对硬件机器的扩展"><a href="#OS对硬件机器的扩展" class="headerlink" title="OS对硬件机器的扩展"></a>OS对硬件机器的扩展</h3><p>操作系统在应用程序和硬件之间建立了一个等价的扩展机器<br>作用</p>
 <ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li>虚拟机器界面<br>操作系统</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
-<li><ul>
-<li><ul>
-<li>物理机器界面<br>硬件<h3 id="OS对硬件机器的扩展"><a href="#OS对硬件机器的扩展" class="headerlink" title="OS对硬件机器的扩展"></a>OS对硬件机器的扩展</h3>操作系统在应用程序和硬件之间建立了一个等价的扩展机器<br>作用</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>对硬件抽象，提高可移植性</li>
-<li>笔底层硬件更容易编程<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>操作系统的三个作用</li>
+<li>笔底层硬件更容易编程</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>操作系统的三个作用</p>
+<ul>
 <li>有效地管理资源</li>
 <li>通过命令接口、编程接口等为用户提供各种功能服务</li>
 <li>对硬件机器的扩展</li>
-<li></li>
 </ul>
 
       
