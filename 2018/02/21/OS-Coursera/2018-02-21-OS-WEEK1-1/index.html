@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="操作系统,Coursera," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="操作系统概述 操作系统做了什么 操作系统的定义与作用 操作系统的主要特征 典型操作系统的架构 操作系统的分类  操作系统做了什么操作系统执行一个C语言的程序会发生什么？？   用户:告诉操作系统执行程序 通过命令行 点击图标   OS 找到程序的相关信息 检查其类型是否为可执行文件 通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址   OS 创建一个新的进程，将可执行文">
+<meta name="keywords" content="操作系统,Coursera">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统概述">
+<meta property="og:url" content="http://luyunyyyyy.com/2018/02/21/OS-Coursera/2018-02-21-OS-WEEK1-1/index.html">
+<meta property="og:site_name" content="lyy 的个人博客">
+<meta property="og:description" content="操作系统概述 操作系统做了什么 操作系统的定义与作用 操作系统的主要特征 典型操作系统的架构 操作系统的分类  操作系统做了什么操作系统执行一个C语言的程序会发生什么？？   用户:告诉操作系统执行程序 通过命令行 点击图标   OS 找到程序的相关信息 检查其类型是否为可执行文件 通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址   OS 创建一个新的进程，将可执行文">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p4hrageik.bkt.clouddn.com/操作系统-Coursera/_image/2018-02-21-16-08-05.jpg">
+<meta property="og:updated_time" content="2018-02-21T08:46:59.168Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统概述">
+<meta name="twitter:description" content="操作系统概述 操作系统做了什么 操作系统的定义与作用 操作系统的主要特征 典型操作系统的架构 操作系统的分类  操作系统做了什么操作系统执行一个C语言的程序会发生什么？？   用户:告诉操作系统执行程序 通过命令行 点击图标   OS 找到程序的相关信息 检查其类型是否为可执行文件 通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址   OS 创建一个新的进程，将可执行文">
+<meta name="twitter:image" content="http://p4hrageik.bkt.clouddn.com/操作系统-Coursera/_image/2018-02-21-16-08-05.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://luyunyyyyy.com/2018/02/21/OS-Coursera/2018-02-21-OS-WEEK1-1/"/>
+
+
+
+
+
+  <title>操作系统概述 | lyy 的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lyy 的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">菜鸟程序员的心路历程</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://luyunyyyyy.com/2018/02/21/OS-Coursera/2018-02-21-OS-WEEK1-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Luyunyyyyy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lyy 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">操作系统概述</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-21T16:02:42+08:00">
+                2018-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  892 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><ul>
+<li>操作系统做了什么</li>
+<li>操作系统的定义与作用</li>
+<li>操作系统的主要特征</li>
+<li>典型操作系统的架构</li>
+<li>操作系统的分类</li>
+</ul>
+<h1 id="操作系统做了什么"><a href="#操作系统做了什么" class="headerlink" title="操作系统做了什么"></a>操作系统做了什么</h1><p>操作系统执行一个C语言的程序会发生什么？？</p>
+<p><img src="http://p4hrageik.bkt.clouddn.com/操作系统-Coursera/_image/2018-02-21-16-08-05.jpg" alt=""></p>
+<ul>
+<li>用户:告诉操作系统执行程序<ul>
+<li>通过命令行</li>
+<li>点击图标</li>
+</ul>
+</li>
+<li>OS<ul>
+<li>找到程序的相关信息</li>
+<li>检查其类型是否为可执行文件</li>
+<li>通过程序首部信息，确定代码和数据在可执行文件中的位置，计算出对应的磁盘块地址</li>
+</ul>
+</li>
+<li>OS<ul>
+<li>创建一个新的进程，将可执行文件映射到该进程结构，表示由该进程执行程序</li>
+<li>为程序设置CPU上下文环境并跳到程序开始初。</li>
+</ul>
+</li>
+<li>执行程序第一条指令，发生<strong>缺页异常</strong></li>
+<li>OS:分配一页物理内存，并将代码从磁盘读入内存然后执行程序</li>
+<li>执行puts函数，在显示器上写字符串</li>
+<li>OS:找到待送往的设备，通常设备由一个进程控制。所以OS把字符串送给进程</li>
+<li>显示器上显示相应字符串…(省略硬件过程)</li>
+</ul>
+<p>CPU 时而执行用户程序，时而执行操作系统程序。</p>
+<h1 id="操作系统的定义和作用"><a href="#操作系统的定义和作用" class="headerlink" title="操作系统的定义和作用"></a>操作系统的定义和作用</h1><h2 id="操作系统是什么？"><a href="#操作系统是什么？" class="headerlink" title="操作系统是什么？"></a>操作系统是什么？</h2><p>操作系统是一个系统软件，一些程序模块的集合。</p>
+<ul>
+<li>尽量有效合理的组织和管理计算机软硬件资源</li>
+<li>合理组织工作流程、控制程序的执行、向用户提供各种服务功能。</li>
+<li>使用户能够灵活方便的使用计算机。使整个计算机系统高效运行。</li>
+</ul>
+<h2 id="KEY-WORD"><a href="#KEY-WORD" class="headerlink" title="KEY WORD"></a>KEY WORD</h2><ul>
+<li>有效: 系统效率，资源利用率</li>
+<li>合理: 公平合理管理资源</li>
+<li>方便使用: 用户界面；编程接口</li>
+</ul>
+<h1 id="操作系统的三个作用"><a href="#操作系统的三个作用" class="headerlink" title="操作系统的三个作用"></a><strong>操作系统的三个作用</strong></h1><ul>
+<li>资源的提供者 -&gt; <strong>有效</strong></li>
+<li>向用户提供各种服务 -&gt; <strong>方便使用</strong></li>
+<li>对硬件机器的扩展 -&gt; <strong>扩展能力</strong></li>
+</ul>
+<h2 id="OS是资源的管理者"><a href="#OS是资源的管理者" class="headerlink" title="OS是资源的管理者"></a>OS是资源的管理者</h2><p>自底向上的来说，操作系统负责管理资源。资源包括硬件资源和软件资源。</p>
+<h3 id="怎样管理资源？？"><a href="#怎样管理资源？？" class="headerlink" title="怎样管理资源？？"></a>怎样管理资源？？</h3><ul>
+<li>跟踪记录资源的使用情况 – 数据结构</li>
+<li>确定资源分配策略 – 算法<ul>
+<li>动态 &amp; 静态</li>
+</ul>
+</li>
+<li>实施资源的分配和回收</li>
+<li>提高资源利用率</li>
+<li>保护资源的使用</li>
+<li>协调多个进程对资源请求的冲突</li>
+</ul>
+<h3 id="从资源管理的角度-五大基本功能"><a href="#从资源管理的角度-五大基本功能" class="headerlink" title="从资源管理的角度 - 五大基本功能"></a>从资源管理的角度 - 五大基本功能</h3><ol>
+<li>进程/线程管理</li>
+<li>存储管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+<li>用户结构</li>
+</ol>
+<h2 id="OS是各种系统服务的提供者"><a href="#OS是各种系统服务的提供者" class="headerlink" title="OS是各种系统服务的提供者"></a>OS是各种系统服务的提供者</h2><p>从用户角度来看，操作系统为用户提供了一组强大的方便使用的命令或者系统调用</p>
+<h3 id="OS是硬件之上的第一层软件"><a href="#OS是硬件之上的第一层软件" class="headerlink" title="OS是硬件之上的第一层软件"></a>OS是硬件之上的第一层软件</h3><p>相比应用程序来说，与硬件相关的工作复杂繁琐。所以需要操作系统帮助我们进行抽象<br>应用程序<br>虚拟机器界面<br>操作系统<br>物理机器界面<br>硬件</p>
+<h3 id="OS对硬件机器的扩展"><a href="#OS对硬件机器的扩展" class="headerlink" title="OS对硬件机器的扩展"></a>OS对硬件机器的扩展</h3><p>操作系统在应用程序和硬件之间建立了一个等价的扩展机器<br>作用</p>
+<ul>
+<li>对硬件抽象，提高可移植性</li>
+<li>笔底层硬件更容易编程</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>操作系统的三个作用</p>
+<ul>
+<li>有效地管理资源</li>
+<li>通过命令接口、编程接口等为用户提供各种功能服务</li>
+<li>对硬件机器的扩展</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
+          
+            <a href="/tags/Coursera/" rel="tag"># Coursera</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/09/Java/2018-02-09/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/21/OS-Coursera/2018-02-21-OS-WEEK1-2/" rel="prev" title="操作系统的主要特征">
+                操作系统的主要特征 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Luyunyyyyy</p>
+              <p class="site-description motion-element" itemprop="description">Neuer,正在学习大数据相关技术</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统概述"><span class="nav-number">1.</span> <span class="nav-text">操作系统概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统做了什么"><span class="nav-number">2.</span> <span class="nav-text">操作系统做了什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统的定义和作用"><span class="nav-number">3.</span> <span class="nav-text">操作系统的定义和作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统是什么？"><span class="nav-number">3.1.</span> <span class="nav-text">操作系统是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KEY-WORD"><span class="nav-number">3.2.</span> <span class="nav-text">KEY WORD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统的三个作用"><span class="nav-number">4.</span> <span class="nav-text">操作系统的三个作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OS是资源的管理者"><span class="nav-number">4.1.</span> <span class="nav-text">OS是资源的管理者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#怎样管理资源？？"><span class="nav-number">4.1.1.</span> <span class="nav-text">怎样管理资源？？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从资源管理的角度-五大基本功能"><span class="nav-number">4.1.2.</span> <span class="nav-text">从资源管理的角度 - 五大基本功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OS是各种系统服务的提供者"><span class="nav-number">4.2.</span> <span class="nav-text">OS是各种系统服务的提供者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OS是硬件之上的第一层软件"><span class="nav-number">4.2.1.</span> <span class="nav-text">OS是硬件之上的第一层软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OS对硬件机器的扩展"><span class="nav-number">4.2.2.</span> <span class="nav-text">OS对硬件机器的扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">true</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">7.4k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
